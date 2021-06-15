@@ -1,31 +1,21 @@
-import com.sun.jdi.event.ExceptionEvent;
-
 import java.util.*;
 
 
-public class Bool {
+public class CoinGame {
 
-	public static class sides {
-		Integer a = 1;
-		Integer b = 2;
-		int c;
-	}
-	
-	
-	
 	public static void main(String[] args) {
-		sides sides = new sides();
 		Scanner scanner = new Scanner(System.in);
 		Random rnd = new Random();
 		
 		//generic random sides of monetka
 
 		rnd.nextInt();
-		String d;
 		System.out.print("Should you go?");
 		String itor = scanner.nextLine();
-		String c = itor;
-		while (itor.equalsIgnoreCase("y")){
+
+		//Program Cycle
+		while (itor.equalsIgnoreCase("y"))// equalsIgnoreCase сверяет даже с текстом
+		{
 			System.out.println("Выберите сторону Орел (1) или Решка (2) : ");
 			String input = scanner.nextLine();
 			int i = Integer.parseInt(input);
@@ -38,6 +28,7 @@ public class Bool {
 			System.out.println("Продолжить? (y,n) ");
 			itor = scanner.nextLine();
 		}
+		System.out.println("До свидания!");
 
 	}
 
