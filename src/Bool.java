@@ -1,3 +1,5 @@
+import com.sun.jdi.event.ExceptionEvent;
+
 import java.util.*;
 
 
@@ -17,25 +19,26 @@ public class Bool {
 		Random rnd = new Random();
 		
 		//generic random sides of monetka
+
 		rnd.nextInt();
-		
+		String d;
 		System.out.print("Should you go?");
 		String itor = scanner.nextLine();
-		
-		
-		
-		
+		String c = itor;
+		while (itor.equalsIgnoreCase("y")){
 			System.out.println("Выберите сторону Орел (1) или Решка (2) : ");
 			String input = scanner.nextLine();
-			int i= Integer.parseInt(input);
-			if(i == rnd.nextInt(2)){
+			int i = Integer.parseInt(input);
+			if (i == rnd.nextInt(2)) {
 				System.out.println("You win!");
+			} else {
+				System.out.println("Fail");
+			}
+			System.out.println(input);
+			System.out.println("Продолжить? (y,n) ");
+			itor = scanner.nextLine();
 		}
-			else {
-			System.out.println("FaIL");
-		}
-		System.out.println(input);
-		
+
 	}
 
 }
